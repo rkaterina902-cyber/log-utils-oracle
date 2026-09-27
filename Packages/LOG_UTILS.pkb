@@ -27,7 +27,7 @@ CREATE OR REPLACE PACKAGE BODY log_utils AS
         v_text VARCHAR2(4000);
     BEGIN
         IF p_text IS NULL THEN
-            v_text := 'Старт логування, назва процесу - '
+            v_text := 'Старт логування, назва процесу = '
                       || p_proc_name;
         ELSE
             v_text := p_text;
@@ -47,7 +47,7 @@ CREATE OR REPLACE PACKAGE BODY log_utils AS
         v_text VARCHAR2(4000);
     BEGIN
         IF p_text IS NULL THEN
-            v_text := 'Завершено логування, назва процесу - '
+            v_text := 'Завершено логування, назва процесу = '
                       || p_proc_name;
         ELSE
             v_text := p_text;
