@@ -1,13 +1,6 @@
-CREATE OR REPLACE FORCE EDITIONABLE VIEW "KATERINA_BLZ"."REP_PROJECT_DEP_V"
-(
-    "PROJECT_ID",
-    "PROJECT_NAME",
-    "DEPARTMENT_NAME",
-    "EMPLOYEE_COUNT",
-    "MANAGER_COUNT",
-    "TOTAL_SALARY"
-) AS
-SELECT
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "KATERINA_BLZ"."REP_PROJECT_DEP_V" ("PROJECT_ID", "PROJECT_NAME", "DEPARTMENT_NAME", "EMPLOYEE_COUNT", "MANAGER_COUNT", "TOTAL_SALARY") AS 
+  SELECT
     p.project_id,
     p.project_name,
     d.department_name,
@@ -23,3 +16,4 @@ GROUP BY
     p.project_id,
     p.project_name,
     d.department_name;
+
