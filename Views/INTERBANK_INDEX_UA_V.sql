@@ -1,11 +1,6 @@
-CREATE OR REPLACE FORCE EDITIONABLE VIEW "KATERINA_BLZ"."INTERBANK_INDEX_UA_V"
-(
-    "DT",
-    "ID_API",
-    "VALUE",
-    "SPECIAL"
-) AS
-SELECT
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "KATERINA_BLZ"."INTERBANK_INDEX_UA_V" ("DT", "ID_API", "VALUE", "SPECIAL") AS 
+  SELECT
     TO_DATE(tt.dt, 'DD.MM.YYYY') AS dt,
     tt.id_api,
     tt.value,
@@ -29,3 +24,4 @@ CROSS JOIN JSON_TABLE
         special  VARCHAR2(1)   PATH '$.special'
     )
 ) tt;
+
