@@ -1,4 +1,4 @@
-CREATE OR REPLACE EDITIONABLE PROCEDURE "KATERINA_BLZ"."DOWNLOAD_IBANK_INDEX_UA" IS
+create or replace PROCEDURE download_ibank_index_ua IS
 BEGIN
     INSERT INTO interbank_index_ua_history
     (
@@ -16,4 +16,3 @@ BEGIN
 
     COMMIT;
 END download_ibank_index_ua;
-/
