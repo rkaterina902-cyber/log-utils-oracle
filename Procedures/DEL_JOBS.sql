@@ -1,4 +1,4 @@
-CREATE OR REPLACE EDITIONABLE PROCEDURE "KATERINA_BLZ"."DEL_JOBS" (
+create or replace PROCEDURE del_jobs(
     p_job_id  IN VARCHAR2,
     po_result OUT VARCHAR2
 ) IS
@@ -22,4 +22,3 @@ BEGIN
             );
     END;
 END del_jobs;
-/
