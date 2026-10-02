@@ -1,4 +1,5 @@
-create or replace PACKAGE log_utils AS
+
+CREATE OR REPLACE PACKAGE log_utils AS
 
     PROCEDURE log_start(
         p_proc_name IN VARCHAR2,
@@ -17,3 +18,5 @@ create or replace PACKAGE log_utils AS
     );
 
 END log_utils;
+/
+
