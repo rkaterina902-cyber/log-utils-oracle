@@ -1,4 +1,4 @@
-CREATE OR REPLACE EDITIONABLE PROCEDURE "KATERINA_BLZ"."ADD_NEW_JOBS" (
+create or replace PROCEDURE ADD_NEW_JOBS(
     p_job_id      IN VARCHAR2,
     p_job_title   IN VARCHAR2,
     p_min_salary  IN NUMBER,
@@ -35,4 +35,3 @@ BEGIN
         po_err := 'Посада ' || p_job_id || ' успішно додана';
     END IF;
 END ADD_NEW_JOBS;
-/
